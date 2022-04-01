@@ -9,9 +9,9 @@ app.use(cors({
 }));
 
 const authRoute = require("./routes/auth");
-const registerRoute = require("./routes/register");
-const generateSAT=require("./routes/GenerateSAT");
-const verifySAT=require("./middleware/VerifyToken");
+// const registerRoute = require("./routes/register");
+// const generateSAT=require("./routes/GenerateSAT");
+// const verifySAT=require("./middleware/VerifyToken");
 
 //Connect to DB
 // mongoose.connect(
@@ -27,7 +27,7 @@ const verifySAT=require("./middleware/VerifyToken");
 //     }
 //   );
 
-mongoose.connect('mongodb://localhost:27017/donate')
+// mongoose.connect('mongodb://localhost:27017/donate')
 
 
 
@@ -37,9 +37,9 @@ app.use(express.json());
 
 // // //Routes Middleware
 app.use("/api/auth", authRoute);
-app.use("/api/register", registerRoute);
-app.use("/api/SAT", generateSAT);
-app.use("api/SAT",verifySAT)
+// app.use("/api/register", registerRoute);
+// app.use("/api/SAT", generateSAT);
+// app.use("api/SAT",verifySAT)
 
 
 
